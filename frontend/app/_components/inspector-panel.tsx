@@ -63,8 +63,8 @@ export function InspectorPanel({
   onTogglePlugin,
 }: InspectorPanelProps) {
   return (
-    <aside className="flex w-full flex-col border-t border-[#dedbd2] bg-[#f4f1e9] lg:min-h-screen lg:w-[372px] lg:border-l lg:border-t-0">
-      <div className="flex items-center justify-between border-b border-[#dedbd2] px-4 py-3">
+    <aside className="flex w-full shrink-0 flex-col border-t border-[#dedbd2] bg-[#f4f1e9] lg:h-full lg:min-h-0 lg:w-[372px] lg:overflow-hidden lg:border-l lg:border-t-0">
+      <div className="flex shrink-0 items-center justify-between border-b border-[#dedbd2] px-4 py-3">
         <div>
           <div className="text-sm font-semibold text-[#22211e]">Inspector</div>
           <div className="text-xs text-[#706b62]">Plugins, activity, and permissions</div>
@@ -138,8 +138,8 @@ function PluginDirectory({
   }, [plugins, query, source]);
 
   return (
-    <div className="flex min-h-0 flex-1 flex-col">
-      <div className="space-y-3 border-b border-[#dedbd2] px-4 py-4">
+    <div className="flex min-h-0 flex-1 flex-col overflow-hidden">
+      <div className="shrink-0 space-y-3 border-b border-[#dedbd2] px-4 py-4">
         <label className="flex h-9 items-center gap-2 rounded-md border border-[#d3d0c7] bg-white px-3 text-[#6d685f]">
           <Search size={15} />
           <input
@@ -224,7 +224,7 @@ function PluginDetails({
   const isConnected = plugin.status === "connected";
 
   return (
-    <div className="border-t border-[#dedbd2] bg-[#fbfaf7] px-4 py-4">
+    <div className="shrink-0 border-t border-[#dedbd2] bg-[#fbfaf7] px-4 py-4">
       <div className="flex items-start gap-3">
         <div className="grid size-10 shrink-0 place-items-center rounded-md bg-[#22211e] text-white">
           <Icon size={19} />

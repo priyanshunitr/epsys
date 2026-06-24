@@ -86,14 +86,14 @@ export const initialMessages: ChatMessage[] = [
   {
     id: "m1",
     role: "user",
-    meta: "You · frontend/AGENTS.md",
+    meta: "You - frontend/AGENTS.md",
     content:
       "In the frontend folder, make an exact replica of Codex where people can chat, connect plugins, and manage the current workspace.",
   },
   {
     id: "m2",
     role: "assistant",
-    meta: "Codex · planning",
+    meta: "Codex - planning",
     content:
       "I will inspect the Next app, keep the work scoped to frontend, and build a stateful Codex-style workbench with chat, plugins, context, approvals, and activity.",
   },
@@ -109,7 +109,7 @@ export const initialMessages: ChatMessage[] = [
   {
     id: "m4",
     role: "assistant",
-    meta: "Codex · implementation",
+    meta: "Codex - implementation",
     content:
       "The app is ready to become a full-screen workspace: left rail for threads, center chat, right inspector for plugins and activity, with local mock interactions for connection and sending.",
   },

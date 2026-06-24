@@ -58,8 +58,8 @@ export function ChatPanel({
   }
 
   return (
-    <section className="flex min-h-0 flex-1 flex-col">
-      <div className="flex flex-wrap items-center justify-between gap-3 border-b border-[#dedbd2] bg-[#fbfaf7] px-4 py-3 lg:px-6">
+    <section className="flex min-h-0 flex-1 flex-col overflow-hidden">
+      <div className="flex shrink-0 flex-wrap items-center justify-between gap-3 border-b border-[#dedbd2] bg-[#fbfaf7] px-4 py-3 lg:px-6">
         <div className="min-w-0">
           <div className="flex items-center gap-2 text-sm text-[#6b655c]">
             <span className="truncate">epsys</span>
@@ -113,7 +113,7 @@ export function ChatPanel({
         </div>
       </div>
 
-      <form onSubmit={handleSubmit} className="border-t border-[#dedbd2] bg-[#fbfaf7] px-4 py-4 lg:px-8">
+      <form onSubmit={handleSubmit} className="shrink-0 border-t border-[#dedbd2] bg-[#fbfaf7] px-4 py-3 lg:px-8">
         <div className="mx-auto max-w-3xl rounded-lg border border-[#cfcac0] bg-white shadow-sm">
           <div className="flex flex-wrap items-center gap-2 border-b border-[#ebe7de] px-3 py-2">
             <button

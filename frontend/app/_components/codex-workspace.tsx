@@ -43,7 +43,7 @@ export function CodexWorkspace() {
       {
         id: `new-${Date.now()}`,
         role: "assistant",
-        meta: "Codex · new thread",
+        meta: "Codex - new thread",
         content:
           "Fresh workspace ready. Add a task, choose a mode, and Codex will pull from the selected project context and connected plugins.",
       },
@@ -70,13 +70,13 @@ export function CodexWorkspace() {
       {
         id: `user-${timestamp}`,
         role: "user",
-        meta: "You · composer",
+        meta: "You - composer",
         content: trimmed,
       },
       {
         id: `assistant-${timestamp}`,
         role: "assistant",
-        meta: `Codex · ${mode.toLowerCase()} mode`,
+        meta: `Codex - ${mode.toLowerCase()} mode`,
         content: `I will use ${contextEnabled ? "auto context" : "selected context"} with ${connectedPlugins || "local tools"} and turn that into the next concrete step.`,
       },
     ]);
@@ -113,8 +113,8 @@ export function CodexWorkspace() {
   }
 
   return (
-    <div className="min-h-screen bg-[#f4f1e9] text-[#22211e]">
-      <div className="flex min-h-screen flex-col lg:flex-row">
+    <div className="min-h-dvh bg-[#f4f1e9] text-[#22211e] lg:h-dvh lg:overflow-hidden">
+      <div className="flex min-h-dvh flex-col lg:h-full lg:min-h-0 lg:flex-row">
         <WorkspaceSidebar
           sessions={sessions}
           activeSessionId={activeSessionId}
@@ -123,7 +123,7 @@ export function CodexWorkspace() {
           onNewThread={handleNewThread}
         />
 
-        <main className="flex min-h-[72vh] min-w-0 flex-1 flex-col bg-[#fbfaf7] lg:min-h-screen">
+        <main className="flex min-h-[72dvh] min-w-0 flex-1 flex-col bg-[#fbfaf7] lg:h-full lg:min-h-0">
           <ChatPanel
             messages={messages}
             draft={draft}

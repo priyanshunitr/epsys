@@ -32,8 +32,8 @@ export function WorkspaceSidebar({
   onNewThread,
 }: WorkspaceSidebarProps) {
   return (
-    <aside className="flex w-full flex-col border-b border-[#dedbd2] bg-[#ebe8df] lg:min-h-screen lg:w-[286px] lg:border-b-0 lg:border-r">
-      <div className="flex items-center justify-between px-4 py-3">
+    <aside className="flex w-full shrink-0 flex-col border-b border-[#dedbd2] bg-[#ebe8df] lg:h-full lg:min-h-0 lg:w-[286px] lg:overflow-hidden lg:border-b-0 lg:border-r">
+      <div className="flex shrink-0 items-center justify-between px-4 py-3">
         <div className="flex min-w-0 items-center gap-3">
           <div className="grid size-8 shrink-0 place-items-center rounded-md bg-[#1d1d1b] text-sm font-semibold text-white">
             C
@@ -52,7 +52,7 @@ export function WorkspaceSidebar({
         </button>
       </div>
 
-      <div className="px-3 pb-3">
+      <div className="shrink-0 px-3 pb-3">
         <button
           type="button"
           onClick={onNewThread}
@@ -63,7 +63,7 @@ export function WorkspaceSidebar({
         </button>
       </div>
 
-      <div className="px-3 pb-3">
+      <div className="shrink-0 px-3 pb-3">
         <label className="flex h-9 items-center gap-2 rounded-md border border-[#d3d0c7] bg-[#f8f6f0] px-3 text-[#6d685f]">
           <Search size={15} />
           <input
@@ -74,7 +74,7 @@ export function WorkspaceSidebar({
         </label>
       </div>
 
-      <nav className="flex gap-1 overflow-x-auto px-3 pb-3 lg:flex-col lg:overflow-visible">
+      <nav className="flex gap-1 overflow-x-auto px-3 pb-3 lg:min-h-0 lg:flex-1 lg:flex-col lg:overflow-y-auto">
         {sessions.map((session) => {
           const active = session.id === activeSessionId;
 
@@ -105,7 +105,7 @@ export function WorkspaceSidebar({
         })}
       </nav>
 
-      <div className="mt-auto hidden px-3 py-3 lg:block">
+      <div className="hidden shrink-0 px-3 py-3 lg:block">
         <div className="space-y-1 border-t border-[#d7d3c8] pt-3">
           <button className="flex h-9 w-full items-center gap-2 rounded-md px-2 text-sm text-[#4e4941] hover:bg-[#dedbd2]" type="button">
             <FolderGit2 size={16} />
